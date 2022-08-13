@@ -1,0 +1,26 @@
+{
+  "name": "Soulbound-NFT-foundry",
+  "version": "1.0.0",
+  "description": "NFT Soulbound foundry and hardhat",
+  "main": "index.js",
+  "repository": "https://github.com/LorenzoZaccagnini/Soulbound-NFT-foundry.git",
+  "author": "Lorenzo Zaccagnini <lorenzozcg@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.1.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.7.3",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.3",
+    "chai": "^4.3.6",
+    "ethers": "^5.6.9",
+    "hardhat": "^2.10.1",
+    "hardhat-preprocessor": "^0.1.4",
+    "ts-node": "^10.9.1",
+    "typechain": "^8.1.0",
+    "typescript": "^4.7.4"
+  }
+}
