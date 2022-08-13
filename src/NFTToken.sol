@@ -1,23 +1,23 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import {ERC721} from "@openzeppelin/token/ERC721/ERC721.sol";
-import {Ownable} from "@openzeppelin/access/Ownable.sol";
-import {Counters} from "@openzeppelin/utils/Counters.sol";
-import {Strings} from "@openzeppelin/utils/Strings.sol";
-import {Ownable} from "@openzeppelin/access/Ownable.sol";
+import "openzeppelin-contracts/contracts/token/ERC721/ERC721.sol";
+import "openzeppelin-contracts/contracts/access/Ownable.sol";
+import "openzeppelin-contracts/contracts/utils/Counters.sol";
+import "openzeppelin-contracts/contracts/utils/Strings.sol";
+import "openzeppelin-contracts/contracts/access/Ownable.sol";
 
 contract NFTToken is ERC721, Ownable {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
 
-    constructor() ERC721("Soulb", "SLB") {}
+    constructor() ERC721("Soulbound", "SBNFT") {}
 
     modifier oneTransfer(address from) {
         require(
             from == 0x0000000000000000000000000000000000000000,
-            "ERC721: token already transferred"
+            "Soulbound nft can't be transferred"
         );
         _;
     }
