@@ -1,9 +1,8 @@
 import fs from "fs";
-import "@nomiclabs/hardhat-waffle";
+import "@nomicfoundation/hardhat-chai-matchers";
 import "@typechain/hardhat";
 import "hardhat-preprocessor";
 import { HardhatUserConfig, task } from "hardhat/config";
-
 function getRemappings() {
   return fs
     .readFileSync("remappings.txt", "utf8")

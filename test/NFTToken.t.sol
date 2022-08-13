@@ -21,20 +21,6 @@ contract NFTTokenTest is Test {
         assertEq(nft.owner(), address(this));
     }
 
-    function testOwnerTransfer() public {
-        assertEq(nft.owner(), address(this));
-        nft.transferOwnership(0x1111111111111111111111111111111111111111);
-        assertEq(nft.owner(), 0x1111111111111111111111111111111111111111);
-    }
-
-    function testOwnerTransferFail() public {
-        assertEq(nft.owner(), address(this));
-        vm.expectRevert("Ownable: caller is not the owner");
-        vm.startPrank(address(2));
-        nft.transferOwnership(0x1111111111111111111111111111111111111111);
-        vm.stopPrank();
-    }
-
     function testMintFailByNotOwnerUser() public {
         vm.expectRevert("Ownable: caller is not the owner");
         vm.startPrank(address(2));
@@ -53,6 +39,20 @@ contract NFTTokenTest is Test {
         vm.expectRevert("Soulbound nft can't be transferred");
         vm.startPrank(address(2));
         nft.safeTransferFrom(address(2), address(3), 0);
+        vm.stopPrank();
+    }
+
+    function testOwnerTransfer() public {
+        assertEq(nft.owner(), address(this));
+        nft.transferOwnership(0x1111111111111111111111111111111111111111);
+        assertEq(nft.owner(), 0x1111111111111111111111111111111111111111);
+    }
+
+    function testOwnerTransferFail() public {
+        assertEq(nft.owner(), address(this));
+        vm.expectRevert("Ownable: caller is not the owner");
+        vm.startPrank(address(2));
+        nft.transferOwnership(0x1111111111111111111111111111111111111111);
         vm.stopPrank();
     }
 }
