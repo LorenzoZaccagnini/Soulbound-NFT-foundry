@@ -1,9 +1,9 @@
 import { expect } from "chai";
 import { ethers } from "hardhat";
 
-describe("Token", function () {
+describe("NFTToken", function () {
   it("Should return name Token", async function () {
-    const Token = await ethers.getContractFactory("Token");
+    const Token = await ethers.getContractFactory("NFTToken");
     const token = await Token.deploy();
     await token.deployed();
 
