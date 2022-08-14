@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/LorenzoZaccagnini/Soulbound-NFT-foundry.git",
   "author": "Lorenzo Zaccagnini <lorenzozcg@gmail.com>",
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "dependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^1.0.2",
     "@nomiclabs/hardhat-ethers": "^2.1.0",
