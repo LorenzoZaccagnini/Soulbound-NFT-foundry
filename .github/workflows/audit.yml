@@ -39,10 +39,10 @@ jobs:
         run: npm --version
 
       - name: Install Dependencies
-        run: npm install
+        run: yarn
 
       - name: Run hardhat Test
-        run: npx hardhat test
+        run: npx hardhat compile; npx hardhat test
 
       - name: slither-action
         uses: crytic/slither-action@v0.1.1
